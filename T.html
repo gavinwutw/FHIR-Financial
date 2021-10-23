@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+
+  <label for="fname">Name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">體溫:</label><br>
+  <input type="text" id="tID" value="36.5"><br><br>
+  <button onclick="myFunction()">Click me</button>
+
+
+<script>
+    var obj;
+obj= {
+  "resourceType": "Observation",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "8310-5",
+        "display": "Body temperature"
+      }
+    ],
+    "text": "Body temperature"
+  },
+  "effectiveDateTime": "1999-07-02",
+  "valueQuantity": {
+    "value": 36.5,
+    "unit": "C",
+    "system": "http://unitsofmeasure.org",
+    "code": "Cel"
+  }
+}
+
+/*
+"subject": {
+    "reference": "Patient/example"
+  },  */
+
+function myFunction() {
+    var t;
+    t = document.getElementById("tID").value;
+    obj.valueQuantity.value = t;
+    var jsonStr = JSON.stringify(obj);
+    alert(jsonStr);
+
+    /*   var apiURL;
+       apiURL = FHIRrootURL + '/' + "Condition";
+        HTTPPostData(apiURL, jsonStr);  */
+     
+
+ 
+  //document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+
+</body>
+</html>

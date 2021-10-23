@@ -1,0 +1,28 @@
+{ "resourceType": "Patient",
+  "identifier": [
+      { "type": {
+        "coding": [
+          {
+            "system": "https://www.dicom.org.tw/cs/identifierValusSet",
+            "code": " IDN"
+          }
+        ]
+      },
+      "system": "https://www.dicom.org.tw/cs/identityCardNumber_tw",
+      "value": "A123456789"
+      }
+     ],
+  
+  "active": true,
+   "name": [
+    {
+      "family": "蕭",
+      "given": [
+        "蕭十一郎"]
+    }
+  ],
+  "gender": "unknown",
+  "birthDate": "1924-10-10"
+}
+
+1114724
